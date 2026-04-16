@@ -312,9 +312,9 @@ export default function TetrisGame() {
   };
 
   const ControlGuide = ({ style = {} }: { style?: React.CSSProperties }) => (
-    <div className="glass-panel" style={{ padding: '24px', width: '220px', ...style }}>
-      <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginBottom: '16px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Controls</p>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    <div className="glass-panel" style={{ padding: '16px', width: '220px', ...style }}>
+      <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginBottom: '12px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Controls</p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
         {[
           { key: '← →', action: 'Move' },
           { key: '↑', action: 'Rotate' },
@@ -340,9 +340,9 @@ export default function TetrisGame() {
   );
 
   const RankingBoard = () => (
-    <div className="glass-panel" style={{ padding: '24px', width: '220px' }}>
-      <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginBottom: '16px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Top 3 Rankings</p>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    <div className="glass-panel" style={{ padding: '16px', width: '220px' }}>
+      <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginBottom: '12px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Top 3 Rankings</p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
         {rankings.length > 0 ? (
           rankings.map((rank, i) => (
             <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '8px' }}>
@@ -361,12 +361,12 @@ export default function TetrisGame() {
   return (
     <div className="main-wrapper">
       {screen === 'lobby' && (
-        <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
-          <div className="glass-panel lobby-content animate-fade-in" style={{ padding: '40px', textAlign: 'center', minWidth: '400px' }}>
-            <h1 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '8px', background: 'linear-gradient(to right, #6366f1, #a855f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>TETRIS</h1>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '32px', letterSpacing: '1px' }}>3줄 제거 도전!</p>
+        <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+          <div className="glass-panel lobby-content animate-fade-in" style={{ padding: '30px', textAlign: 'center', minWidth: '380px' }}>
+            <h1 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '4px', background: 'linear-gradient(to right, #6366f1, #a855f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>TETRIS</h1>
+            <p style={{ color: 'var(--text-muted)', marginBottom: '24px', letterSpacing: '1px' }}>3줄 제거 도전!</p>
             
-            <div style={{ marginBottom: '32px' }}>
+            <div style={{ marginBottom: '24px' }}>
               <label style={{ display: 'block', textAlign: 'left', marginBottom: '8px', fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '500' }}>사용자 이름</label>
               <input 
                 type="text" 
@@ -389,26 +389,26 @@ export default function TetrisGame() {
               />
             </div>
             
-            <button className="btn btn-primary" style={{ width: '100%', height: '54px', fontSize: '1.1rem' }} onClick={startGame}>
+            <button className="btn btn-primary" style={{ width: '100%', height: '50px', fontSize: '1.1rem' }} onClick={startGame}>
               게임 시작
             </button>
             
             <footer style={{ 
-              marginTop: '40px', 
-              paddingTop: '20px', 
+              marginTop: '30px', 
+              paddingTop: '15px', 
               borderTop: '1px solid var(--border)', 
-              fontSize: '0.85rem', 
+              fontSize: '0.8rem', 
               color: 'var(--text-muted)', 
               lineHeight: '1.8' 
             }}>
-              <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
                 <span>과목명: <strong>AI코딩</strong></span>
                 <span>학과: <strong>물리학과</strong></span>
                 <span>이름: <strong>김기태</strong></span>
               </div>
             </footer>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <RankingBoard />
             <ControlGuide />
           </div>
@@ -467,9 +467,9 @@ export default function TetrisGame() {
             </div>
           </div>
           
-          <div className="side-panel" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            <div className="glass-panel" style={{ padding: '20px', width: '220px' }}>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginBottom: '12px' }}>NEXT</p>
+          <div className="side-panel" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div className="glass-panel" style={{ padding: '16px', width: '220px' }}>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginBottom: '8px' }}>NEXT</p>
               <div style={{ 
                 display: 'grid', 
                 gridTemplateColumns: `repeat(4, 25px)`, 
@@ -507,21 +507,21 @@ export default function TetrisGame() {
             <RankingBoard />
             <ControlGuide />
 
-            <div className="glass-panel" style={{ padding: '24px', width: '220px', flex: 1, display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <div className="glass-panel" style={{ padding: '16px', width: '220px', flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <div>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>PLAYER</p>
-                <h3 style={{ fontSize: '1.1rem', color: 'white' }}>{userName}</h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>PLAYER</p>
+                <h3 style={{ fontSize: '1rem', color: 'white' }}>{userName}</h3>
               </div>
               
               <div>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>TIME</p>
-                <h3 style={{ fontSize: '1.8rem', fontFamily: 'monospace', color: '#6366f1' }}>{formatTime(seconds)}</h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>TIME</p>
+                <h3 style={{ fontSize: '1.5rem', fontFamily: 'monospace', color: '#6366f1' }}>{formatTime(seconds)}</h3>
               </div>
               
               <div>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>LINES</p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>LINES</p>
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
-                  <h3 style={{ fontSize: '1.8rem' }}>{linesCleared}</h3>
+                  <h3 style={{ fontSize: '1.5rem' }}>{linesCleared}</h3>
                   <span style={{ color: 'var(--text-muted)' }}>/ {WIN_LINES}</span>
                 </div>
                 <div style={{ width: '100%', height: '4px', background: 'rgba(255,255,255,0.1)', borderRadius: '2px', marginTop: '8px', overflow: 'hidden' }}>
@@ -543,25 +543,25 @@ export default function TetrisGame() {
       )}
 
       {(screen === 'gameover' || screen === 'fail') && (
-        <div className="glass-panel animate-fade-in" style={{ padding: '40px', textAlign: 'center', minWidth: '420px', border: screen === 'gameover' ? '2px solid var(--primary)' : '2px solid #ef4444' }}>
-          <div style={{ fontSize: '4rem', marginBottom: '10px' }}>{screen === 'gameover' ? '🏆' : '👾'}</div>
-          <h1 style={{ fontSize: '2.5rem', marginBottom: '8px', color: screen === 'gameover' ? 'var(--primary)' : '#ef4444' }}>
+        <div className="glass-panel animate-fade-in" style={{ padding: '30px', textAlign: 'center', minWidth: '380px', border: screen === 'gameover' ? '2px solid var(--primary)' : '2px solid #ef4444' }}>
+          <div style={{ fontSize: '3rem', marginBottom: '8px' }}>{screen === 'gameover' ? '🏆' : '👾'}</div>
+          <h1 style={{ fontSize: '2rem', marginBottom: '4px', color: screen === 'gameover' ? 'var(--primary)' : '#ef4444' }}>
             {screen === 'gameover' ? 'MISSION CLEAR!' : 'GAME OVER'}
           </h1>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '32px' }}>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '24px' }}>
             {screen === 'gameover' ? `${linesCleared}줄 제거를 성공하셨습니다!` : '블록이 가득 찼습니다.'}
           </p>
           
-          <div className="glass-panel" style={{ padding: '24px', marginBottom: '32px', background: screen === 'gameover' ? 'rgba(99, 102, 241, 0.1)' : 'rgba(239, 68, 68, 0.1)' }}>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>{screen === 'gameover' ? '기록된 완료 시간' : '진행 시간'}</p>
-            <h2 style={{ fontSize: '3.5rem', margin: '8px 0', fontFamily: 'monospace' }}>{finalTime}</h2>
-            <p style={{ fontWeight: '600' }}>
+          <div className="glass-panel" style={{ padding: '20px', marginBottom: '24px', background: screen === 'gameover' ? 'rgba(99, 102, 241, 0.1)' : 'rgba(239, 68, 68, 0.1)' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>{screen === 'gameover' ? '기록된 완료 시간' : '진행 시간'}</p>
+            <h2 style={{ fontSize: '2.8rem', margin: '4px 0', fontFamily: 'monospace' }}>{finalTime}</h2>
+            <p style={{ fontWeight: '600', fontSize: '0.9rem' }}>
               {screen === 'gameover' ? '수고하셨습니다, ' : '다시 도전해보세요, '}
               <span style={{ color: screen === 'gameover' ? 'var(--primary)' : '#ef4444' }}>{userName}</span>님!
             </p>
           </div>
           
-          <button className="btn btn-primary" style={{ width: '100%', height: '54px', fontSize: '1.1rem', background: screen === 'gameover' ? 'var(--primary)' : '#ef4444' }} onClick={resetToLobby}>
+          <button className="btn btn-primary" style={{ width: '100%', height: '50px', fontSize: '1.1rem', background: screen === 'gameover' ? 'var(--primary)' : '#ef4444' }} onClick={resetToLobby}>
             다시 시작하기
           </button>
         </div>
